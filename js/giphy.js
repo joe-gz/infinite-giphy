@@ -20,6 +20,27 @@ $(document).ready( function() {
 })
 
 
+$(window).scroll(function() {
+  if($(window).scrollTop() == $(document).height() - $(window).height()) {
+    // ajax call get data from server and append to the div
+    var keyword = $("input[name='keyword']").val();
+    var url = "http://api.giphy.com/v1/gifs/search?q="+keyword+"&api_key=dc6zaTOxFJmzC"
+    $.ajax({
+      url: url,
+      type: "GET",
+      dataType: "json"
+    }).done ( function(response){
+      console.log(response.data[0].url);
+      // call giphy function below to pull random gifs
+      giphy(response);
+    }).fail ( function (){
+      console.log("Failure");
+    }).always( function(){
+      console.log("Something's happening");
+    })
+  }
+});
+
 
 var giphy = function(response) {
   for (var i=0;i<10;i++) {
