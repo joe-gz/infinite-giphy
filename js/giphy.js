@@ -1,4 +1,5 @@
 
+ // initial API call
 $(document).ready( function() {
   $(".search").click(function(){
     apiCall();
@@ -6,6 +7,7 @@ $(document).ready( function() {
 })
 
 
+// API call after scrolling to the bottom of page
 $(window).scroll(function() {
   if($(window).scrollTop() == $(document).height() - $(window).height()) {
     // ajax call get data from server and append to the div
