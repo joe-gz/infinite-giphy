@@ -39,6 +39,6 @@ var giphy = function(response) {
     // provides random number up to the length of the data array
     var rand = Math.round(Math.random() * (response.data.length - 1));
     // append image to body
-    $('body').append("<img src = '"+response.data[rand].images.fixed_height.url+"'>")
+    $('.container').append("<div class = col-md-3><img src = '"+response.data[rand].images.fixed_height.url+"'></div>")
   }
 }
