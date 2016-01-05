@@ -2,20 +2,6 @@
 
 body {
   font-family: Ribeye Marrow;
-  margin: 0;
-  padding: 0;
-  padding-left: 40%;
-}
-
-form {
-  position: fixed;
-  left: 10%;
-  top: 100px;
-  width: 30%;
-}
-
-form h1 {
-  font-size: 30px;
 }
 
 img {
@@ -31,4 +17,12 @@ img {
   height: 350px;
   width: 350px;
   transition: 1s;
+}
+
+.center form {
+    display:inline-block;
+}
+
+.center {
+  text-align: center;
 }

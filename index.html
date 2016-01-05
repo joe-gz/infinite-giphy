@@ -2,22 +2,64 @@
 <html lang="en">
 <head>
   <title>Infinite Giphy!</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="js/giphy.js"></script>
 </head>
 <body>
-  <script src="js/jquery.js"></script>
-  <script src="js/giphy.js"></script>
 
-  <form id="search">
-    <h1>Infinite Giphy!</h1>
-    <input type="search" name="keyword" id="keyword"/>
-    <button type='button' class = "search">Search</button>
-  </form>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" data-toggle="popover" data-placement="bottom" title="Bootstrap GOD" data-content="I am not..">Joe GZ</a>
+      </div>
 
-  <div class = "container"></div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#" data-toggle="popover" data-placement="right" title="Silly.." data-content="Why would you actually click me? Search for GIFs!">Click Me!</a></li>
+          <li><a href="#" data-toggle="popover" data-placement="bottom" title="Silly.." data-content="I said DON'T click! Search for cats or something..">Don't Click Me!</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">I do nothing</a></li>
+              <li><a href="#">No seriously</a></li>
+              <li><a href="#">Nothing</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">At all</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Like, NOTHING</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+
+  <div class = "container">
+    <div class="center">
+      <form id="search">
+        <div class="title col-sm-12">
+          <h1>Infinite Giphy!</h1>
+        </div>
+        <input type="search" name="keyword" id="keyword"/>
+        <button type='button' class = "search">Search</button>
+      </form>
+    </div>
+    <div class="giphys"></div>
+
+  </div>
 
 </body>
 </html>

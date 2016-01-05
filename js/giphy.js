@@ -1,6 +1,7 @@
 
- // initial API call
+// initial API call
 $(document).ready( function() {
+  $('[data-toggle="popover"]').popover();
   $(".search").click(function(){
     apiCall();
   })
@@ -35,10 +36,10 @@ var apiCall = function() {
 
 
 var giphy = function(response) {
-  for (var i=0;i<10;i++) {
+  for (var i=0;i<9;i++) {
     // provides random number up to the length of the data array
     var rand = Math.round(Math.random() * (response.data.length - 1));
     // append image to body
-    $('.container').append("<div class = col-md-3><img src = '"+response.data[rand].images.fixed_height.url+"'></div>")
+    $('.giphys').append("<div class = col-sm-4><img class = 'giphy-gif' src = '"+response.data[rand].images.fixed_height.url+"'></div>")
   }
 }
